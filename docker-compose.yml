@@ -1,6 +1,7 @@
 services:
   collector:
     build: .
+    command: ["/usr/local/bin/script.sh"]
     volumes:
       - reports:/var/www
       - /var/log:/var/log:ro
@@ -8,7 +9,7 @@ services:
   viewer:
     image: nginx:alpine
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - reports:/usr/share/nginx/html:ro
     depends_on:

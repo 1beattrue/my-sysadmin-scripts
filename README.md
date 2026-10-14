@@ -15,5 +15,5 @@
 ```bash
 docker build -t my-script .
 docker run --rm -v /var/log:/var/log:ro my-script   # без тома лог хоста не виден
-docker compose up --build -d                        # отчёт: http://localhost:8080/report.txt
+docker compose up --build -d                        # отчёт: http://localhost:8081/report.txt
 ```
