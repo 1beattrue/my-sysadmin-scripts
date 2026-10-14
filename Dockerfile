@@ -4,4 +4,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends python3 \
 WORKDIR /var/www
 COPY script.sh /usr/local/bin/script.sh
 RUN chmod +x /usr/local/bin/script.sh
+STOPSIGNAL SIGINT
 CMD ["/bin/bash", "-c", "/usr/local/bin/script.sh & exec python3 -m http.server 8080"]
