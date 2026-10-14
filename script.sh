@@ -13,4 +13,4 @@ if [ ! -r "$LOGFILE" ]; then
 fi
 
 grep -aiE "error|fail" "$LOGFILE" > report.txt
-echo "Готово: report.txt содержит $(wc -l < report.txt) строк"
+echo "Готово: строк в report.txt: $(wc -l < report.txt)"
