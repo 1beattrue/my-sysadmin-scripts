@@ -21,7 +21,7 @@ docker info > /dev/null 2>&1 || DOCKER="sudo docker"
 
 echo "== 1. Образ и контейнер =="
 sudo systemctl stop my-app 2>/dev/null || true
-$DOCKER build -q -t my-script .
+$DOCKER build -q --provenance=false -t my-script .
 $DOCKER rm -f my-app > /dev/null 2>&1 || true
 $DOCKER create -p 8080:8080 --name my-app -v /var/log:/var/log:ro my-script
 
