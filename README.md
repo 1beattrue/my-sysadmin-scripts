@@ -17,3 +17,9 @@ docker build -t my-script .
 docker run --rm -v /var/log:/var/log:ro my-script   # без тома лог хоста не виден
 docker compose up --build -d                        # отчёт: http://localhost:8081/report.txt
 ```
+
+## Развёртывание с нуля
+
+```bash
+./bootstrap.sh   # Ubuntu 22.04: образ, RAID 1 + LVM, nginx/TLS, systemd-служба
+```
