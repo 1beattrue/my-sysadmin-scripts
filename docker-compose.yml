@@ -1,0 +1,18 @@
+services:
+  collector:
+    build: .
+    volumes:
+      - reports:/var/www
+      - /var/log:/var/log:ro
+
+  viewer:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - reports:/usr/share/nginx/html:ro
+    depends_on:
+      - collector
+
+volumes:
+  reports:
