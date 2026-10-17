@@ -1,3 +1,10 @@
+Отчёт сборщика логов
+Дата:      2026-10-17 17:35:57
+Хост:      sysadmin-host
+Источник:  /var/log/syslog
+Фильтр:    error|fail (без учёта регистра)
+Найдено:   35 строк (error: 20, fail: 19)
+----------------------------------------
 Oct 14 18:09:52 sysadmin-host kernel: [    0.000000] NUMA: Failed to initialise from firmware
 Oct 14 18:09:52 sysadmin-host systemd[1]: Condition check resulted in Process error reports when automatic reporting is enabled (file watch) being skipped.
 Oct 14 18:09:52 sysadmin-host systemd[1]: Condition check resulted in Process error reports when automatic reporting is enabled (timer based) being skipped.
